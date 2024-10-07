@@ -7,6 +7,9 @@ Describe the goal of the project.
 List the license of the source data and a link to the Wikimedia Foundation terms of use. You should probably provide a very brief summary as to how the ToU applies to the dataset you have created.
 We used 'hyperlink' to create and it relfects because its academical 
 
+All the text of Wikipedia pages (including articles), and all public datasets, are available
+CC-BY-SA.
+
 Clearly name any intermediary data files and any final output files that your code creates. 
 Json file and png files
 
