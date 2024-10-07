@@ -10,7 +10,11 @@ We used '' to create and it relfects because its academical  https://doc.wikimed
 All the text of Wikipedia pages (including articles), and all public datasets, are available
 CC-BY-SA.
 ## Setting
-Regarding the setting, one can use rqeuire
+Regarding the setting, one can use requirement.yaml in this repository with this code
+`````
+conda env create -f my_conda.yaml
+`````
+
 Clearly name any intermediary data files and any final output files that your code creates. 
 Json file and png files
 
