@@ -13,6 +13,7 @@ Regarding the setting, one can use requirement.yaml in this repository with this
 conda env create -f my_conda.yaml
 `````
 Note: The 'requests' module is not a standard Python module. You will need to install this with pip/pip3 if you do not already have it.
+Note: the ipynb module should be downloaded to run the notebook file, while it is not mandatory but strongly encouraged to follow step-by-step process
 
 ## Data Used and Created 
 The data we used is named rare-disease_cleaned.AUG.2024.csv, which contains the article (name of the disease) and URL of the WikiMedia Page and came from the [National Organization for Rare Disease](https://rarediseases.org/). It narrows down the list of API calls. Based on the article list, we called API to collect 3 different JSON files of pageviews which consist of 
