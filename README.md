@@ -5,7 +5,7 @@ The goal of this project is to understand how to call API and trend of the view 
 
 Describe the goal of the project.
 List the license of the source data and a link to the Wikimedia Foundation terms of use. You should probably provide a very brief summary as to how the ToU applies to the dataset you have created.
-We used 'hyperlink' to create and it relfects because its academical 
+We used '' to create and it relfects because its academical  https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/reference/page-views.html 
 
 All the text of Wikipedia pages (including articles), and all public datasets, are available
 CC-BY-SA.
