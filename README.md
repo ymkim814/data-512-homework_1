@@ -5,7 +5,7 @@ The goal of this project is to understand how to call API and the trend of the v
 
 According to [Wikipedia Terms of Use](https://foundation.wikimedia.org/wiki/Policy:Terms_of_Use), this homework follows their rules because it engages Wikimedia's informational pieces to understand and apply our academic learnings, not using any of the results or procedure to create harm for someone else and utilize the data responsibility while Wikimedia hosts them as API. Lastly, we are committing lawful behavior by putting appropriate licenses and not commercializing any of this.  
 
-The documentation of API is in [Wikimedia Pageviews](https://wikimedia.org/api/rest_v1/#/Pageviews%20data) and the methods of accessing API in Wikimedia are located [Wikimedia REST API](https://www.mediawiki.org/wiki/Wikimedia_REST_API). The framework of wp_article_views_example was developed by Dr. David W. McDonald for use in DATA 512, a course in the UW MS Data Science degree program. This code is provided under the [Creative Commons](https://creativecommons.org) [CC-BY license](https://creativecommons.org/licenses/by/4.0/). Revision 1.3 - August 16, 2024.
+The documentation of API is in [Wikimedia Pageviews](https://wikimedia.org/api/rest_v1/#/Pageviews%20data) and the methods of accessing API in Wikimedia are located [Wikimedia REST API](https://www.mediawiki.org/wiki/Wikimedia_REST_API). Information about customizing pageview using URL and API is located [here](https://doc.wikimedia.org/generated-data-platform/aqs/analytics-api/reference/page-views.html). The framework of wp_article_views_example was developed by Dr. David W. McDonald for use in DATA 512, a course in the UW MS Data Science degree program. This code is provided under the [Creative Commons](https://creativecommons.org) [CC-BY license](https://creativecommons.org/licenses/by/4.0/). Revision 1.3 - August 16, 2024.
 
 ## Setting
 Regarding the setting, one can use requirement.yaml in this repository with this code
@@ -15,10 +15,12 @@ conda env create -f my_conda.yaml
 Note: The 'requests' module is not a standard Python module. You will need to install this with pip/pip3 if you do not already have it.
 
 ## Data Used and Created 
-The data we used is named rare-disease_cleaned.AUG.2024.csv, which contains the article (name of the disease) and URL of the WikiMedia Page. It narrows down the list of API calls. Based on the article list, we called API to collect 3 different JSON files of pageviews which consist of 
+The data we used is named rare-disease_cleaned.AUG.2024.csv, which contains the article (name of the disease) and URL of the WikiMedia Page and came from the [National Organization for Rare Disease](https://rarediseases.org/). It narrows down the list of API calls. Based on the article list, we called API to collect 3 different JSON files of pageviews which consist of 
 `````
 'project', 'article', 'granularity', 'timestamp', 'agent', and 'views.
 `````
+Note: We collected data where the agent = user.
+
 **rare-disease_monthly_desktop_201507-202409** collected the pageviews of articles that used desktop access from 2015, July to 2024, September. 
 **rare-disease_monthly_mobile_201507-202409** collected the pageviews of articles that used either web-mobile or app-mobile access from 2015, July to 2024, September. 
 **rare-disease_monthly_cumulative_201507-202409** collected the pageviews of articles that used either desktop, web-mobile, or app-mobile access access from 2015, July to 2024, September. This is the sum of the views of desktop and mobile JSON files.
@@ -49,11 +51,11 @@ def process_data(json_data):
 desktop_df = process_data(desktop_data)
 mobile_df = process_data(mobile_data)
 `````
-With **desktop_df**a nd **mobile_df**, we created three different visualizations. Each visualization distinguishes desktop and mobile access by having different styles of line (- and ---)
+With **desktop_df**a nd **mobile_df**, we created three different visualizations. Each visualization distinguishes desktop and mobile access by having different styles of line - straight and dotted lines. Matplotlib library is used.
 1) Maximum Average and Minimum Average - Plots articles with maximum and minimum average page views for desktop and mobile access, having 4 different time series. 
 2) Top 10 Peak Page Views - Plots articles with top 10 Peak page views for desktop and mobile access, having 20 different time series.
 3) Fewest Months of Data - Plots articles with the top 10 fewest months of available data, for desktop and mobile access, having 20 different time series.
-4)  
+ 
 All plots were saved as .png file in the same folder of notebook file using the code below and can be viewed in the **PageView Visualization** folder in this repository.
 `````
 plt.savefig('highest_lowest_average_page_requests.png')
