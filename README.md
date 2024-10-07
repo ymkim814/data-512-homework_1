@@ -61,3 +61,7 @@ plt.savefig('highest_lowest_average_page_requests.png')
 
 ## Note
 Since we use a subset of the disease using rare-disease_cleaned.AUG.2024.csv, the list of 1773 diseases might not be a comprehensive list of the whole data and biased. Also, there are some diseases that contain \ in it, making it hard to transform into clean text. Also, the time frame of the data is 20150701 - 20240930.
+
+## The MIT License
+License: MIT
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
