@@ -9,7 +9,8 @@ We used '' to create and it relfects because its academical  https://doc.wikimed
 
 All the text of Wikipedia pages (including articles), and all public datasets, are available
 CC-BY-SA.
-
+## Setting
+Regarding the setting, one can use rqeuire
 Clearly name any intermediary data files and any final output files that your code creates. 
 Json file and png files
 
